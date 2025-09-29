@@ -38,9 +38,9 @@ class HomePage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(hotel.name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                        Text(hotel.name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                         const SizedBox(height: 4),
-                        Text(hotel.price, style: const TextStyle(color: Colors.green)),
+                        
                       ],
                     ),
                   ),

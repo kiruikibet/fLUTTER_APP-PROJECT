@@ -28,7 +28,7 @@ class HotelDetailPage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text("Booking for ${hotel.name} coming soon!")),
+                        SnackBar(content: Text("Booking for ${hotel.name} is being processed!")),
                       );
                     },
                     child: const Text("Book Now"),

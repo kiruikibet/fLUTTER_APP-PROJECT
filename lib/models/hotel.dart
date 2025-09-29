@@ -1,10 +1,10 @@
 
 class Hotel {
-  final int id;
-  final String name;
-  final String desc;
-  final String price;
-  final String imageUrl;
+  int id;
+  String name;
+  String desc;
+  String price;
+  String imageUrl;
 
   Hotel({
     required this.id,
@@ -16,24 +16,214 @@ class Hotel {
 }
 
 final List<Hotel> hotels = [
-  Hotel(id: 1, name: "Sunset Resort", desc: "Luxury resort with ocean views.", price: "\$120/night", imageUrl: "https://picsum.photos/400?1"),
-  Hotel(id: 2, name: "Grand Palace", desc: "Elegant hotel in the city center.", price: "\$90/night", imageUrl: "https://picsum.photos/400?2"),
-  Hotel(id: 3, name: "Ocean View", desc: "Beachfront hotel with stunning sunsets.", price: "\$110/night", imageUrl: "https://picsum.photos/400?3"),
-  Hotel(id: 4, name: "Mountain Lodge", desc: "Peaceful lodge in the mountains.", price: "\$80/night", imageUrl: "https://picsum.photos/400?4"),
-  Hotel(id: 5, name: "Royal Suites", desc: "Modern suites with premium service.", price: "\$150/night", imageUrl: "https://picsum.photos/400?5"),
-  Hotel(id: 6, name: "Safari Inn", desc: "Stay close to nature and wildlife.", price: "\$100/night", imageUrl: "https://picsum.photos/400?6"),
-  Hotel(id: 7, name: "City Comfort", desc: "Affordable comfort in the city.", price: "\$60/night", imageUrl: "https://picsum.photos/400?7"),
-  Hotel(id: 8, name: "Golden Palm", desc: "Tropical getaway with palm gardens.", price: "\$130/night", imageUrl: "https://picsum.photos/400?8"),
-  Hotel(id: 9, name: "Blue Lagoon", desc: "Relax at the lagoon with spa services.", price: "\$140/night", imageUrl: "https://picsum.photos/400?9"),
-  Hotel(id: 10, name: "Urban Retreat", desc: "Stylish retreat in downtown.", price: "\$100/night", imageUrl: "https://picsum.photos/400?10"),
-  Hotel(id: 11, name: "Lakeside Villa", desc: "Enjoy lakeside views and serenity.", price: "\$115/night", imageUrl: "https://picsum.photos/400?11"),
-  Hotel(id: 12, name: "Forest Haven", desc: "Stay surrounded by nature.", price: "\$95/night", imageUrl: "https://picsum.photos/400?12"),
-  Hotel(id: 13, name: "White Sands", desc: "Luxury white-sand beach hotel.", price: "\$160/night", imageUrl: "https://picsum.photos/400?13"),
-  Hotel(id: 14, name: "Coastal Breeze", desc: "Charming coastal views and comfort.", price: "\$125/night", imageUrl: "https://picsum.photos/400?14"),
-  Hotel(id: 15, name: "Hilltop Hotel", desc: "Breathtaking hilltop views.", price: "\$105/night", imageUrl: "https://picsum.photos/400?15"),
-  Hotel(id: 16, name: "Emerald Resort", desc: "Relax in an emerald paradise.", price: "\$145/night", imageUrl: "https://picsum.photos/400?16"),
-  Hotel(id: 17, name: "Desert Rose", desc: "Unique desert lodge experience.", price: "\$135/night", imageUrl: "https://picsum.photos/400?17"),
-  Hotel(id: 18, name: "Serenity Lodge", desc: "Quiet lodge for total relaxation.", price: "\$110/night", imageUrl: "https://picsum.photos/400?18"),
-  Hotel(id: 19, name: "Crystal Bay", desc: "Crystal clear waters at your doorstep.", price: "\$170/night", imageUrl: "https://picsum.photos/400?19"),
-  Hotel(id: 20, name: "Garden Inn", desc: "Affordable stay with garden views.", price: "\$70/night", imageUrl: "https://picsum.photos/400?20"),
+  Hotel(
+    id: 1,
+    name: "Crowne Plaza Nairobi Airport",
+    desc: "Luxury comfort just minutes from JKIA with world-class dining and service.",
+    price: "\$150/night",
+    imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/06/51/96/hotel-exterior-during.jpg?w=1800&h=-1&s=1",
+  ),
+  Hotel(
+    id: 2,
+    name: "Palacina The Residence & The Suites",
+    desc: "Elegant boutique living with timeless luxury in the heart of Nairobi.",
+    price: "\$200/night",
+    imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/2f/20/d8/meeting-room.jpg?w=900&h=-1&s=1",
+  ),
+  Hotel(
+    id: 3,
+    name: "Villa Rosa Kempinski",
+    desc: "Five-star luxury blending European flair with Kenyan warmth.",
+    price: "\$250/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipPAGvD8ISakOHKjL8WwJWctO-nHdf86zVeUqsE2=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 4,
+    name: "Hemingways Nairobi",
+    desc: "An oasis of tranquility with personalized butler service.",
+    price: "\$400/night",
+    imageUrl: "https://yellowzebrasafaris.com/media/43621/hemingways-nairobi-kenya-pool-yellow-zebra-safaris.jpg?width=2048&height=1024&format=jpg&v=1da5e17c2552670",
+  ),
+  Hotel(
+    id: 5,
+    name: "Radisson Blu Hotel Nairobi Upper Hill",
+    desc: "Modern elegance with skyline views and premium comfort.",
+    price: "\$180/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipMDlIVazgCTqwmWB1uC_geaU0wCjH9W59hHJPQa=s1360-w1360-h1020-rw",
+     ),
+  Hotel(
+    id: 6,
+    name: "Fairmont The Norfolk",
+    desc: "Historic charm and luxury since 1904 in central Nairobi.",
+    price: "\$220/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNV25cH6XP8iq4xG6emdqTwqdVUp95hOXd21evA=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 7,
+    name: "Sankara Nairobi, Autograph Collection",
+    desc: "Stylish urban retreat with rooftop dining and world-class art.",
+    price: "\$210/night",
+    imageUrl: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqZsxjp9tLqxmqflMRBx6Ay-ziTp7vj9Du58XoZwVWJMPSHk4cmW-C1fFCuCbPVoJ7spH-UwEFMYU9z9c_2PC2-p37zSEHgPiemXntkllCTz8UMRvtrBRaid9Mf1aP6xFpCWFVWgg=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 8,
+    name: "Tribe Hotel, Nairobi",
+    desc: "Bold, artistic design with luxury and authentic Kenyan culture.",
+    price: "\$230/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipPOlT0n64_BdVhGwW3B5VsqZz5_teItMLTCEo_L=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 9,
+    name: "The Boma Nairobi",
+    desc: "Modern luxury with warm African hospitality and top amenities.",
+    price: "\$160/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipPYVl8pNTw8oHycogR1QEvATjJwmohhzf46mAZL=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 10,
+    name: "Hilton Garden Inn Nairobi Airport",
+    desc: "Comfort and convenience just minutes from the airport.",
+    price: "\$140/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNm67n7_IBZZ3ZdaoVoD9uIhpsDlmV4UIxEK_35=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 11,
+    name: "Eka Hotel Nairobi",
+    desc: "Chic and convenient stay close to Nairobi’s attractions.",
+    price: "\$130/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipMdtmKlD9T8wQRFLbo3JpmWmWft9cEzodcTcdg6=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 12,
+    name: "Best Western Plus Meridian Hotel",
+    desc: "Affordable comfort with modern amenities in the city center.",
+    price: "\$90/night",
+    imageUrl: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrSXp3D8p6R-EHllGATf9KADzIkJrbrTuilpWaRwdvginQZPLc-cI99bcgOEhwXbO8yWcafuMhQEWXvP-DHmOJwpil0zFDu0Fc10WLIfQuFXrCTWzPnCpe1wuHTzRW1u8xo0f8=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 13,
+    name: "Four Points by Sheraton Nairobi Airport",
+    desc: "Seamless airport access with luxury and modern comfort.",
+    price: "\$160/night",
+    imageUrl: "https://lh3.googleusercontent.com/proxy/d33BwJFzvhBNbR1hllSe_NJ2ODhgOfZFSzBCgmlkykJq7ZbzBQS8HBXpV7Od5PLGmHIR416VmShmuaKPVNpa6mpWf6vZP8uT2c-nOiyCQb9ZywpwTskFyL4GyJZIkoKS6Poj7LQ0ururoLwbhzlOX4hcDCh7OQ=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 14,
+    name: "The Sarova Stanley",
+    desc: "Iconic Nairobi landmark hotel with heritage luxury.",
+    price: "\$190/night",
+    imageUrl: "https://www.sarovahotels.com/assets/images/blogimage/756/Sarova-Stanley_1464757751.jpg",
+  ),
+  Hotel(
+    id: 15,
+    name: "Mövenpick Hotel & Residences Nairobi",
+    desc: "Upscale hotel with panoramic city views and refined dining.",
+    price: "\$200/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipOZWe5ERikvcTJBTuuxmtpmeV-I-CKDbTJ1SyiL=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 16,
+    name: "ibis Styles Nairobi Westlands",
+    desc: "Trendy and budget-friendly stay in the vibrant Westlands.",
+    price: "\$80/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNcuW64nNMyBhIdK9wAfwzUR_gCWFJWmQe-6Qk9=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 17,
+    name: "Mercure Nairobi Upper Hill",
+    desc: "Comfortable business-friendly hotel in Upper Hill.",
+    price: "\$110/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNTzeCj11j3kGr3iNCjmdu3IwvpFs5TLN2jS0RB=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 18,
+    name: "Nairobi Serena Hotel",
+    desc: "Classic five-star luxury with serene gardens and pools.",
+    price: "\$240/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipOhNnTqoJ_kFDhbcDqr8HxsO9nlQ7ME_HrIug7b=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 19,
+    name: "The Concord Hotel & Suites",
+    desc: "Spacious suites with elegance and modern luxury.",
+    price: "\$170/night",
+    imageUrl: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrNdF2989jC_mDnQmcpK2EcfmYKeSpnqPdxABAqF2wvqaYnkkH4xDAbBXQGkFpepPSHbvpbwAVRSCASQ6Zssn1xOpgEeVImtRwQoDZ9dtfjm9P7PuaC5tuSUC4RmE1ZWIKzy1bH1R8jvGE=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 20,
+    name: "Safari Park Hotel",
+    desc: "Resort-style hotel with lush gardens and cultural shows.",
+    price: "\$150/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipM29AXQyehu_soXKYBFJC6f1qad0-wMkr3f5B1h=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 21,
+    name: "Boma Inn Nairobi",
+    desc: "Affordable comfort with easy access to central Nairobi.",
+    price: "\$90/night",
+    imageUrl: "https://assets.simplotel.com/simplotel/image/upload/x_0,y_53,w_1024,h_576,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/boma-inn-nairobi/Boma_Inn_Nairobi",
+  ),
+  Hotel(
+    id: 22,
+    name: "Tamarind Tree Hotel Nairobi",
+    desc: "Vibrant modern hotel near Wilson Airport and attractions.",
+    price: "\$120/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNd7YpmbhhMKiWY2Dp1dD25TNskrMeA9YkUXlc=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 23,
+    name: "The Heron Portico",
+    desc: "Charming boutique hotel with warm hospitality.",
+    price: "\$100/night",
+    imageUrl: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nommHDTCENpYy4m_3W_IK5bycbOMuYqxC0J3vugMGR8k3H3CSkILzWGPHWAmnm9wWSNgh4yu75btxpr5bauMlQwt9dJ0RVOWytvDVoS98Vp5EqEWPE9ynHDlolybvbFqJ5NSkGA=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 24,
+    name: "Park Inn by Radisson Nairobi Westlands",
+    desc: "Contemporary hotel with vibrant dining and comfort.",
+    price: "\$110/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipPR2qC7OXThMGwtdTE7d1KagX46BUuoRWyzs8z-=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 25,
+    name: "La Mada Hotel",
+    desc: "Tranquil stay surrounded by Nairobi’s green forest.",
+    price: "\$140/night",
+    imageUrl: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noHGP3Bh0ah7zV25EfJhzt8_I0N1sWvWoOvPhv8slXpkx9qz19-wQ5ISwgSs6clX7nSdB4sivRWHI58wF3QoKJhoxncNQ8zQOS8o7eyvWVCevUINy12CiuON81OXkwg_u4sB1yA=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 26,
+    name: "DoubleTree by Hilton Nairobi Hurlingham",
+    desc: "Contemporary elegance with Hilton comfort.",
+    price: "\$160/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipOrpEONKbwVDGi1nVsyIxhY8-HBT9rybxeEReqI=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 27,
+    name: "Weston Hotel",
+    desc: "Elegant stay with great dining and event spaces.",
+    price: "\$150/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNkVCkESi3gPSP-db9h7gNbuRmruw8Np9nKbydi=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 28,
+    name: "Melili Hotel",
+    desc: "Affordable modern hotel with cozy interiors.",
+    price: "\$70/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipOsUJOVCa7O7lSbb9ak_1UysSWASSATytJ9bIhg=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 29,
+    name: "Town Lodge Upper Hill Nairobi",
+    desc: "Smart and budget-friendly business hotel.",
+    price: "\$85/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipODDxD_xF1F9PVhTEOg2oZjpyG47mcoh6mubbPQ=s1360-w1360-h1020-rw",
+  ),
+  Hotel(
+    id: 30,
+    name: "Ole Sereni Hotel Nairobi",
+    desc: "Unique views over Nairobi National Park with luxury comfort.",
+    price: "\$180/night",
+    imageUrl: "https://lh3.googleusercontent.com/p/AF1QipMih1jfFYjXPo0hmijCJRkANytifA7wqsnVvkzY=w253-h168-k-no",
+  ),
 ];
