@@ -8,7 +8,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Hotel Booking")),
+      backgroundColor: const Color(0xFFDFF5E0), // soft light green to match detail page
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 102, 152, 245),
+        foregroundColor: Colors.white,
+        centerTitle: true,
+        title: const Text(
+          "Hotel Booking",
+          style: TextStyle(fontWeight: FontWeight.w900, fontSize: 26),
+        ),
+      ),
       body: GridView.builder(
         padding: const EdgeInsets.all(12),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -28,33 +37,45 @@ class HomePage extends StatelessWidget {
               );
             },
             child: Card(
-              elevation: 3,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image(
-                    image: ResizeImage(AssetImage(hotel.imageUrl), width: 360),
-                    height: 120,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) => Container(
-                      height: 120,
-                      color: Colors.grey[300],
-                      child: const Icon(Icons.broken_image, size: 40, color: Colors.grey),
+              color: Colors.white,
+              elevation: 4,
+              child: SizedBox(
+                height: 260,
+                child: Column(
+                  children: [
+                    // image takes top half of the card
+                    SizedBox(
+                      height: 130,
+                      width: double.infinity,
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.vertical(top: Radius.circular(4)),
+                        child: Image(
+                          image: ResizeImage(AssetImage(hotel.imageUrl), width: 720),
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) => Container(
+                            color: const Color.fromARGB(255, 26, 183, 54),
+                            child: const Icon(Icons.broken_image, size: 40, color: Colors.grey),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(hotel.name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                        const SizedBox(height: 4),
-                        
-                      ],
+                    // name centered below image
+                    Expanded(
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Text(
+                            hotel.name,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           );
