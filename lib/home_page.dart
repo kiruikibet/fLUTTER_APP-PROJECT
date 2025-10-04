@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => HotelDetailPage(hotel: hotel)),
+                MaterialPageRoute(builder: (_ ) => HotelDetailPage(hotel: hotel)),
               );
             },
             child: Card(
@@ -32,7 +32,17 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.network(hotel.imageUrl, height: 120, width: double.infinity, fit: BoxFit.cover),
+                  Image(
+                    image: ResizeImage(AssetImage(hotel.imageUrl), width: 360),
+                    height: 120,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) => Container(
+                      height: 120,
+                      color: Colors.grey[300],
+                      child: const Icon(Icons.broken_image, size: 40, color: Colors.grey),
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
